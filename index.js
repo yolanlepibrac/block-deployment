@@ -7,7 +7,7 @@ try {
   console.log(`Check if a PR exists with the word ${prName}`);
 
   const buildNeedToBeCancelled = "true";
-  core.setOutput(" cancel-build", buildNeedToBeCancelled);
+  core.setOutput("cancel_build", buildNeedToBeCancelled);
   console.log(`Build need to be cancelled ${buildNeedToBeCancelled}`);
 
 
