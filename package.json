@@ -1,0 +1,24 @@
+{
+  "name": "block-deployment",
+  "version": "1.0.0",
+  "description": "This action provide a way to cancel an other action if an open PR has a certain name in you repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yolanlepibrac/block-deployment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yolanlepibrac/block-deployment/issues"
+  },
+  "homepage": "https://github.com/yolanlepibrac/block-deployment#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}

@@ -1,0 +1,17 @@
+name: 'Block deployment'
+description: 'Provide a way to cancel an other action if an open PR has a certain name in you repo'
+inputs:
+  credential:  # id of input
+    description: 'credential to connect to github'
+    required: true
+    default: 'error'
+  pullRequestWords:  # id of input
+    description: 'Word tha will be recognize in you PR to block the actions'
+    required: true
+    default: ['cancel-releases', 'block-deployment']
+outputs:
+  time: # id of output
+    description: 'To be defined'
+runs:
+  using: 'node16'
+  main: 'index.js'
