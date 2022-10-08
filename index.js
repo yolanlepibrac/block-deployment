@@ -4,14 +4,14 @@ const github = require('@actions/github');
 try {
   // `credential` ans `pullRequestWords` inputs defined in action metadata file
   console.log("log")
-//   const credential = core.getInput('credential');
-//   console.log(`Hello ${credential}!`);
+  const credential = core.getInput('credential');
+  console.log(`Hello ${credential}!`);
 
-//   const time = (new Date()).toTimeString();
-//   core.setOutput("time", time);
-//   // Get the JSON webhook payload for the event that triggered the workflow
-//   const payload = JSON.stringify(github.context.payload, undefined, 2)
-//   console.log(`The event payload: ${payload}`);
+  const time = (new Date()).toTimeString();
+  core.setOutput("time", time);
+  // Get the JSON webhook payload for the event that triggered the workflow
+  const payload = JSON.stringify(github.context.payload, undefined, 2)
+  console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
