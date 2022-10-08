@@ -5,10 +5,6 @@ inputs:
     description: 'credential to connect to github'
     required: true
     default: 'error'
-  pullRequestWords:  # id of input
-    description: 'Word tha will be recognize in you PR to block the actions'
-    required: true
-    default: ['cancel-releases', 'block-deployment']
 outputs:
   time: # id of output
     description: 'To be defined'
