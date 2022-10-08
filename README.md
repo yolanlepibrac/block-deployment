@@ -3,13 +3,13 @@ This action provide a way to cancel an other action if an open PR has a certain 
 
 ## Inputs
 
-## `credentials`
+## `pr-name`
 
-**Required** Your github account credentials. Default `"error"`.
+**Required** Word tha will be recognize in you PR to block the actions. Default `"cancel-build"`.
 
 ## Outputs
 
-## `pullRequestWords`
+## `todo`
 
 Todo
 
