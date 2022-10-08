@@ -6,8 +6,8 @@ try {
   const prName = core.getInput('pr-name');
   console.log(`Check if a PR exists with the word ${prName}`);
 
-  const buildNeedToBeCancelled = true;
-  core.setOutput(" cancel-build", true);
+  const buildNeedToBeCancelled = "true";
+  core.setOutput(" cancel-build", buildNeedToBeCancelled);
   console.log(`Build need to be cancelled ${buildNeedToBeCancelled}`);
 
 
