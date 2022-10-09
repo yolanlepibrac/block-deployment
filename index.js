@@ -15,6 +15,15 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
 
+  const octokit = github.getOctokit(token)
+  const result = await octokit.rest.pulls.list({
+    owner: github.context.repo.owner,
+    repo: github.context.repo.repo,
+    state: "open"
+  })
+
+  console.log(result)
+
 } catch (error) {
   core.setFailed(error.message);
 }

@@ -1,6 +1,11 @@
 name: 'Block deployment'
+author: yolanlepibrac
 description: 'Provide a way to cancel an other action if an open PR has a certain name in you repo'
 inputs:
+  github-token:
+    description: The GitHub token used to create an authenticated client.
+    required: false
+    default: ${{ github.token }}
   pr-name:  
     description: 'Word tha will be recognize in you PR to block the actions'
     required: true
