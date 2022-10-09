@@ -27,6 +27,7 @@ on:
       - master
       - production
 
+# Example of use
 jobs:
   block_release_if_hot_fixing:
     runs-on: ubuntu-latest
@@ -41,6 +42,7 @@ jobs:
           pr-name: 'cancel-build'
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+  # This action will be executed only if the word "cancel-build" is not included in one open PR of you repo
   log_something:
     runs-on: ubuntu-latest
     needs: [block_release_if_hot_fixing]
