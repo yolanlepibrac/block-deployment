@@ -4,6 +4,7 @@ const github = require('@actions/github');
 async function main(){
     try {
         // `credential` ans `pullRequestWords` inputs defined in action metadata file
+        const token = core.getInput('github-token');
         const prName = core.getInput('pr-name');
         console.log(`Check if a PR exists with the word ${prName}`);
       
