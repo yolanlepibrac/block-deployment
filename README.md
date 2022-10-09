@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Cancel workflow if PR is named cancel-build
         id: cancelBuild
-        uses: yolanlepibrac/block-deployment@v1.12.1
+        uses: yolanlepibrac/block-deployment@v2.1
         with:
           pr-name: 'cancel-build'
           github-token: ${{ secrets.GITHUB_TOKEN }}
