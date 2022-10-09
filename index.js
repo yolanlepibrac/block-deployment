@@ -21,7 +21,7 @@ async function main(){
         const output = buildNeedToBeCancelled ? "true" : "false"
       
         core.setOutput("cancel_build", output);
-        console.log(`Build need to be cancelled ${output}`);
+        console.log(`Build need to be cancelled: "${output}"`);
       
       } catch (error) {
         core.setFailed(error.message);
