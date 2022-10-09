@@ -18,7 +18,7 @@ Word tha will be recognize in you PR to block the actions. Default `"cancel-buil
 Return "true" if an open PR contain the pr-name input, and "false" if not
 
 ## Example usage
-
+```yml
 name: Continuous Integration
 
 on:
@@ -27,6 +27,7 @@ on:
       - master
       - production
 
+# Example of use
 jobs:
   block_release_if_hot_fixing:
     runs-on: ubuntu-latest
@@ -41,6 +42,7 @@ jobs:
           pr-name: 'cancel-build'
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+  # This action will be executed only if the word "cancel-build" is not included in one open PR of you repo
   log_something:
     runs-on: ubuntu-latest
     needs: [block_release_if_hot_fixing]
@@ -48,3 +50,4 @@ jobs:
     steps:
       - name: the rest jobs
         run: echo "run the rest jobs"
+```
