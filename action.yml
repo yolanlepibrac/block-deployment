@@ -11,7 +11,7 @@ inputs:
     required: true
     default: 'cancel-build'
 outputs:
-  cancel_build: # id of output
+    cancel_build: # id of output
     description: 'If true, the repo contain an opened PR with the pr-name. The build must me cancel'
 runs:
   using: 'node16'
