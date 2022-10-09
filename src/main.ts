@@ -1,5 +1,5 @@
-const core = require("@actions/core");
-import github from "@actions/github";
+import * as core from '@actions/core';
+import * as github from "@actions/github";
 
 async function main() {
   try {
@@ -25,7 +25,7 @@ async function main() {
     core.setOutput("cancel_build", output);
     console.log(`Build need to be cancelled: "${output}"`);
   } catch (error) {
-    core.setFailed(error);
+    core.setFailed(JSON.stringify(error));
   }
 }
 
