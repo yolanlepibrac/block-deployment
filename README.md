@@ -18,7 +18,7 @@ Word tha will be recognize in you PR to block the actions. Default `"cancel-buil
 Return "true" if an open PR contain the pr-name input, and "false" if not
 
 ## Example usage
-
+```yml
 name: Continuous Integration
 
 on:
@@ -48,3 +48,4 @@ jobs:
     steps:
       - name: the rest jobs
         run: echo "run the rest jobs"
+```
