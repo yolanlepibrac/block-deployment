@@ -1,17 +1,16 @@
 name: 'Block deployment'
-description: 'Provide a way to cancel an other action if an open PR has a certain name in you repo'
+author: yolanlepibrac
+description: 'Provide a way to cancel other actions if an open PR has a certain name in you repo'
 inputs:
-  credential:  # id of input
-    description: 'credential to connect to github'
+  github-token:
+    description: The GitHub token used to create an authenticated client.
     required: true
-    default: 'error'
-  pullRequestWords:  # id of input
+  pr-name:  
     description: 'Word tha will be recognize in you PR to block the actions'
-    required: true
-    default: ['cancel-releases', 'block-deployment']
+    default: 'cancel-build'
 outputs:
-  time: # id of output
-    description: 'To be defined'
+  cancel_build: # id of output
+    description: 'If true, the repo contain an opened PR with the pr-name. The build must me cancel'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
